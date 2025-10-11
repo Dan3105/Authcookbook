@@ -1,0 +1,106 @@
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.hero-section {
+    margin-bottom: 4rem;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.btn-action.primary {
+    background-color: #1b6ec2;
+    color: white;
+}
+
+.btn-action.primary:hover {
+    background-color: #1861ac;
+    transform: translateY(-2px);
+}
+
+.btn-action.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-action.secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e1e5e9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-action {
+        width: 100%;
+        max-width: 300px;
+    }
+}
