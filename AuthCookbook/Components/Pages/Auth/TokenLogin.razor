@@ -1,0 +1,40 @@
+@page "/login/token"
+
+<PageTitle>Token Login - AuthCookbook</PageTitle>
+
+<div class="auth-container">
+    <div class="auth-header">
+        <h2>Token Authentication</h2>
+        <p>Login with token expiry control</p>
+    </div>
+
+    <div class="login-grid">
+        <div class="auth-card">
+            <div class="auth-card-header">
+                <h3>Token Authentication</h3>
+                <p>Login with token expiry control</p>
+            </div>
+            <div class="auth-card-body">
+                <div class="form-group">
+                    <input type="email" placeholder="Email" class="form-input" />
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-input" />
+                </div>
+                <div class="form-group">
+                    <select class="form-input">
+                        <option>1 Hour</option>
+                        <option>24 Hours</option>
+                        <option>7 Days</option>
+                        <option>30 Days</option>
+                    </select>
+                </div>
+                <button class="auth-btn primary">Login with Token</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="auth-footer">
+        <p>Don't have an account? <a href="/register">Sign up here</a></p>
+    </div>
+</div>

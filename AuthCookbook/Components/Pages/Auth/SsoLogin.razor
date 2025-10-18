@@ -1,0 +1,37 @@
+@page "/login/sso"
+
+<PageTitle>SSO Login - AuthCookbook</PageTitle>
+
+<div class="auth-container">
+    <div class="auth-header">
+        <h2>Single Sign-On</h2>
+        <p>Enterprise authentication providers</p>
+    </div>
+
+    <div class="login-grid">
+        <div class="auth-card">
+            <div class="auth-card-header">
+                <h3>Single Sign-On</h3>
+                <p>Enterprise authentication providers</p>
+            </div>
+            <div class="auth-card-body">
+                <button class="auth-btn azure">
+                    <span class="btn-icon">🏢</span>
+                    Azure AD
+                </button>
+                <button class="auth-btn google">
+                    <span class="btn-icon">🔍</span>
+                    Google Workspace
+                </button>
+                <button class="auth-btn okta">
+                    <span class="btn-icon">🔐</span>
+                    Okta
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="auth-footer">
+        <p>Don't have an account? <a href="/register">Sign up here</a></p>
+    </div>
+</div>

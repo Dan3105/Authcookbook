@@ -1,0 +1,87 @@
+@using AuthCookbook.Core.Authentication.Login
+@using AuthCookbook.Core.Authentication.Login.Session
+@using AuthCookbook.Core.Authentication.Login.Session.Service
+@rendermode InteractiveServer
+@inject IAuthSessionService authSessionService
+@inject NavigationManager navigationManager
+@page "/login/session"
+
+@code {
+    string email = string.Empty;
+    string password = string.Empty;
+    string errorMessage = string.Empty;
+    string successMessage = string.Empty;
+    void Login()
+    {
+        errorMessage = string.Empty; // Clear previous errors
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+        {
+            errorMessage = "Email and password are required";
+            return;
+        }
+        try
+        {
+            var loginService = authSessionService as ILoginService<AuthSession>;
+            if (loginService == null)
+            {
+                errorMessage = "Login service is not available.";
+                return;
+            }
+            var session = loginService.LoginWithPassword(email, password);
+            if (session != null)
+            {
+                successMessage = "Login successful!";
+                // Optionally redirect or show success message
+            }
+            else
+            {
+                errorMessage = "Invalid email or password.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Login failed: {ex.Message}";
+        }
+    }
+}
+
+<PageTitle>Session Login - AuthCookbook</PageTitle>
+
+<div class="auth-container">
+    <div class="auth-header">
+        <h2>Session Cookie Login</h2>
+        <p>Traditional email/password authentication</p>
+    </div>
+
+    <div class="login-grid">
+       <div class="auth-card">
+           <div class="auth-card-header">
+               <h3>Session Cookie</h3>
+               <p>Traditional email/password authentication</p>
+           </div>
+           <div class="auth-card-body">    
+               <form @onsubmit="Login">
+                   <div class="form-group">
+                       <input type="text" @bind="email" placeholder="Email or username" class="form-input" />
+                   </div>
+                   <div class="form-group">
+                       <input type="password" @bind="password" placeholder="Password" class="form-input" />
+                   </div>
+                   <button type="submit" class="auth-btn primary">Login with Session</button>
+               </form>
+           </div>
+           @if (!string.IsNullOrEmpty(errorMessage))
+           {
+               <div style="color: red; margin-left:25px; margin-bottom: 10px;">@errorMessage</div>
+           }
+            @if (!string.IsNullOrEmpty(successMessage))
+            {
+                <div style="color: green; margin-left:25px; margin-bottom: 10px;">@successMessage</div>
+            }
+       </div>
+    </div>
+
+    <div class="auth-footer">
+        <p>Don't have an account? <a href="/register">Sign up here</a></p>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+@page "/login/jwt"
+
+<PageTitle>JWT Login - AuthCookbook</PageTitle>
+
+<div class="auth-container">
+    <div class="auth-header">
+        <h2>JWT Authentication</h2>
+        <p>JSON Web Token with refresh option</p>
+    </div>
+
+    <div class="login-grid">
+        <div class="auth-card">
+            <div class="auth-card-header">
+                <h3>JWT Authentication</h3>
+                <p>JSON Web Token with refresh option</p>
+            </div>
+            <div class="auth-card-body">
+                <div class="form-group">
+                    <input type="email" placeholder="Email" class="form-input" />
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-input" />
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="refreshToken" />
+                    <label for="refreshToken">Enable Refresh Token</label>
+                </div>
+                <button class="auth-btn primary">Login with JWT</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="auth-footer">
+        <p>Don't have an account? <a href="/register">Sign up here</a></p>
+    </div>
+</div>

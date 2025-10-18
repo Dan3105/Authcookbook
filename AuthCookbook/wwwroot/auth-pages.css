@@ -1,0 +1,718 @@
+/* Auth Container Styles */
+.auth-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.auth-header h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Grid Layouts */
+.login-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.register-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .register-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Auth Card Styles */
+.auth-card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e1e5e9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.auth-card.large {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .auth-card.large {
+        grid-column: span 1;
+    }
+}
+
+.auth-card-header {
+    padding: 1.5rem 1.5rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.auth-card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #333;
+    margin: 0 0 0.5rem;
+}
+
+.auth-card-header p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.auth-card-body {
+    padding: 1.5rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #1b6ec2;
+    box-shadow: 0 0 0 3px rgba(27, 110, 194, 0.1);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin: 0;
+}
+
+.checkbox-group label {
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Button Styles */
+.auth-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.auth-btn.large {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+}
+
+.auth-btn:last-child {
+    margin-bottom: 0;
+}
+
+.auth-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Color Variants */
+.auth-btn.primary {
+    background-color: #1b6ec2;
+    color: white;
+}
+
+.auth-btn.primary:hover {
+    background-color: #1861ac;
+}
+
+.auth-btn.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.auth-btn.secondary:hover {
+    background-color: #5a6268;
+}
+
+.auth-btn.azure {
+    background-color: #0078d4;
+    color: white;
+}
+
+.auth-btn.azure:hover {
+    background-color: #106ebe;
+}
+
+.auth-btn.google {
+    background-color: #db4437;
+    color: white;
+}
+
+.auth-btn.google:hover {
+    background-color: #c23321;
+}
+
+.auth-btn.github {
+    background-color: #333;
+    color: white;
+}
+
+.auth-btn.github:hover {
+    background-color: #24292e;
+}
+
+.auth-btn.microsoft {
+    background-color: #00bcf2;
+    color: white;
+}
+
+.auth-btn.microsoft:hover {
+    background-color: #00a8dc;
+}
+
+.auth-btn.okta {
+    background-color: #007dc1;
+    color: white;
+}
+
+.auth-btn.okta:hover {
+    background-color: #0070ad;
+}
+
+.btn-icon {
+    font-size: 1.1rem;
+}
+
+/* QR Code Styles */
+.qr-placeholder {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.qr-code {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.qr-pattern {
+    width: 80%;
+    height: 80%;
+    background-image: 
+        repeating-linear-gradient(0deg, #333 0px, #333 4px, transparent 4px, transparent 8px),
+        repeating-linear-gradient(90deg, #333 0px, #333 4px, transparent 4px, transparent 8px);
+    opacity: 0.6;
+}
+
+.qr-placeholder p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Footer Styles */
+.auth-footer {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #e1e5e9;
+}
+
+.auth-footer p {
+    color: #666;
+    margin: 0;
+}
+
+.auth-footer a {
+    color: #1b6ec2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Back Link Styles */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #1b6ec2;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #1861ac;
+    text-decoration: underline;
+}
+
+/* Single Card Layout */
+.auth-single-card {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+/* Token Display Styles */
+.token-display, .jwt-display {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.token-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.token-text {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    word-break: break-all;
+    border: 1px solid #dee2e6;
+}
+
+.copy-btn {
+    padding: 0.5rem 1rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: #218838;
+}
+
+.token-info {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0.5rem 0 0;
+}
+
+.token-section {
+    margin-bottom: 1.5rem;
+}
+
+.token-section h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* SSO and OAuth2 Styles */
+.sso-options, .oauth-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.auth-btn.saml {
+    background-color: #ff6b35;
+    color: white;
+}
+
+.auth-btn.saml:hover {
+    background-color: #e55a2b;
+}
+
+.auth-btn.facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.auth-btn.facebook:hover {
+    background-color: #166fe5;
+}
+
+.auth-btn.twitter {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.auth-btn.twitter:hover {
+    background-color: #1a91da;
+}
+
+.auth-btn.discord {
+    background-color: #5865f2;
+    color: white;
+}
+
+.auth-btn.discord:hover {
+    background-color: #4752c4;
+}
+
+.loading-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.error-message, .success-message {
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Info Cards */
+.sso-info, .oauth-info, .qr-instructions {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.sso-steps, .instruction-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sso-steps li, .instruction-steps li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #1b6ec2;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.sso-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.security-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.feature h4 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.feature p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* QR Code Enhanced Styles */
+.qr-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.qr-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.qr-container {
+    margin-bottom: 1.5rem;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    background: white;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.qr-code.expired {
+    background: #f8f9fa;
+    opacity: 0.5;
+}
+
+.qr-expired {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #dc3545;
+}
+
+.qr-expired span {
+    font-size: 2rem;
+}
+
+.qr-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2px;
+    width: 120px;
+    height: 120px;
+}
+
+.qr-cell {
+    background: #f8f9fa;
+    border-radius: 1px;
+}
+
+.qr-cell.filled {
+    background: #333;
+}
+
+.qr-info {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.qr-info p {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+}
+
+.countdown {
+    font-weight: bold;
+    color: #dc3545;
+}
+
+.qr-actions {
+    margin-bottom: 2rem;
+}
+
+.status-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.status-message.scanning {
+    background: #cce5ff;
+    color: #004085;
+    border: 1px solid #b3d7ff;
+}
+
+.status-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.status-icon {
+    font-size: 1.25rem;
+}
+
+.app-download {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.download-btn {
+    padding: 0.75rem 1.5rem;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+    background: #555;
+    color: white;
+    text-decoration: none;
+}
+
+.download-btn.ios {
+    background: #007aff;
+}
+
+.download-btn.ios:hover {
+    background: #0051d5;
+}
+
+.download-btn.android {
+    background: #34a853;
+}
+
+.download-btn.android:hover {
+    background: #2d8f45;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 1rem;
+    }
+    
+    .login-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .auth-header h2 {
+        font-size: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+    }
+    
+    .token-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .security-features {
+        gap: 1.5rem;
+    }
+    
+    .qr-code {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .qr-grid {
+        width: 90px;
+        height: 90px;
+    }
+}
