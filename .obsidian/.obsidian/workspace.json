@@ -1,0 +1,201 @@
+{
+  "main": {
+    "id": "81ebe837c86f33f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "d40de89a4b6c978b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0ce21744d4313c0c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001 - .NET Authcookbook/Authentication Method/0600 Policy Schemes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "0600 Policy Schemes"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "74abbb88f1f275a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "3a5fc5ac260eb70c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "acbbf3e7ac02e7af",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b5a48c52e705ff11",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "multiple scheme",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "9dc06eaadf54ecbd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 239.5
+  },
+  "right": {
+    "id": "4bd70931a11c3d11",
+    "type": "split",
+    "children": [
+      {
+        "id": "747ff37dbfe2a443",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dce9c3ada61d66d6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for README"
+            }
+          },
+          {
+            "id": "3d9fdb77681615fa",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from README"
+            }
+          },
+          {
+            "id": "c8de71d317522d78",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "22d83183b0c3c51e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "0ce21744d4313c0c",
+  "lastOpenFiles": [
+    "001 - .NET Authcookbook/Authentication Method/0100 Cookie Authentication.md",
+    "001 - .NET Authcookbook/Authentication Method/0600 Policy Schemes.md",
+    "001 - .NET Authcookbook/Authentication Method/0500 (Optional) - Windows Authentication.md",
+    "001 - .NET Authcookbook/Authentication Method/0400 (Optional) - Certificate Authentication.md",
+    "001 - .NET Authcookbook/Authentication Method/Pasted image 20251020101018.png",
+    "001 - .NET Authcookbook/Authentication Method/0200 OpenID Connect.md",
+    "001 - .NET Authcookbook/Authentication Method/0110 SameSiteMode.md",
+    "001 - .NET Authcookbook/Authentication Method/0310 JWT Authentication - Recommended approaches to create a JWT.md",
+    "001 - .NET Authcookbook/0003 Authorization.md",
+    "001 - .NET Authcookbook/Authorization Method",
+    "Pasted image 20251026105033.png",
+    "001 - .NET Authcookbook/Authentication Method/Pasted image 20251026083003.png",
+    "001 - .NET Authcookbook/Authentication Method",
+    "Overview Security.md",
+    "001 - .NET Authcookbook/Authentication Method/0300 JWT Authentication.md",
+    "001 - .NET Authcookbook/0001 Authentication.md",
+    "README.md",
+    "001 - .NET Authcookbook",
+    "000 - System Abstract Authentication/Pasted image 20251020090859.png",
+    "000 - System Abstract Authentication/Pasted image 20250930213620.png",
+    "000 - System Abstract Authentication/0002.1 - Session.md",
+    "000 - System Abstract Authentication/0002 - Solutions Authentication.md",
+    "000 - System Abstract Authentication/0001 - User Registration.md",
+    "000 - System Abstract Authentication/0000 - Authentication Requirements.md",
+    "000 - System Abstract Authentication",
+    "claims.md"
+  ]
+}

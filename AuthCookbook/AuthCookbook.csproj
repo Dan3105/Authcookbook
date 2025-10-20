@@ -7,6 +7,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Core\Authentication\Login\JWT\**" />
+    <Compile Remove="Core\Authentication\Login\OAuth2\**" />
+    <Compile Remove="Core\Authentication\Login\QRCode\**" />
+    <Compile Remove="Core\Authentication\Login\SSO\**" />
+    <Compile Remove="Core\Authentication\Login\Token\**" />
+    <Content Remove="Core\Authentication\Login\JWT\**" />
+    <Content Remove="Core\Authentication\Login\OAuth2\**" />
+    <Content Remove="Core\Authentication\Login\QRCode\**" />
+    <Content Remove="Core\Authentication\Login\SSO\**" />
+    <Content Remove="Core\Authentication\Login\Token\**" />
+    <EmbeddedResource Remove="Core\Authentication\Login\JWT\**" />
+    <EmbeddedResource Remove="Core\Authentication\Login\OAuth2\**" />
+    <EmbeddedResource Remove="Core\Authentication\Login\QRCode\**" />
+    <EmbeddedResource Remove="Core\Authentication\Login\SSO\**" />
+    <EmbeddedResource Remove="Core\Authentication\Login\Token\**" />
+    <None Remove="Core\Authentication\Login\JWT\**" />
+    <None Remove="Core\Authentication\Login\OAuth2\**" />
+    <None Remove="Core\Authentication\Login\QRCode\**" />
+    <None Remove="Core\Authentication\Login\SSO\**" />
+    <None Remove="Core\Authentication\Login\Token\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="9.0.9" />
@@ -15,11 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\Authentication\Login\JWT\" />
-    <Folder Include="Core\Authentication\Login\QRCode\" />
-    <Folder Include="Core\Authentication\Login\OAuth2\" />
-    <Folder Include="Core\Authentication\Login\SSO\" />
-    <Folder Include="Core\Authentication\Login\Token\" />
+    <Folder Include="Api\" />
   </ItemGroup>
 
 </Project>

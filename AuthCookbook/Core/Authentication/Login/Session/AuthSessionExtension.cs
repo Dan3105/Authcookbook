@@ -1,4 +1,5 @@
-﻿using AuthCookbook.Core.Authentication.Login.Session.Service;
+﻿using AuthCookbook.Core.Authentication.Login.CookieAuthentication;
+using AuthCookbook.Core.Authentication.Login.Session.Service;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace AuthCookbook.Core.Authentication.Login.Session
@@ -8,11 +9,9 @@ namespace AuthCookbook.Core.Authentication.Login.Session
         public static IServiceCollection AddAuthServices(this IServiceCollection services,
             IWebHostEnvironment env)
         {
-            services.AddScoped<IAuthSessionService, AuthSessionService>();
-            services
-                .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie();
-
+            // NOTE: ONLY ADD ONE AUTHENTICATION METHOD HERE,
+            // THIS PRACTICE IS NOT USING FOR MULTI-AUTHENTICATION
+            services.AddCookieAuthServices(env);
             return services;
         }
     }

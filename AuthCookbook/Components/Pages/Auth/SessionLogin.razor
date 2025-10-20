@@ -1,8 +1,6 @@
 @using AuthCookbook.Core.Authentication.Login
 @using AuthCookbook.Core.Authentication.Login.Session
-@using AuthCookbook.Core.Authentication.Login.Session.Service
 @rendermode InteractiveServer
-@inject IAuthSessionService authSessionService
 @inject NavigationManager navigationManager
 @page "/login/session"
 
@@ -13,35 +11,7 @@
     string successMessage = string.Empty;
     void Login()
     {
-        errorMessage = string.Empty; // Clear previous errors
-        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
-        {
-            errorMessage = "Email and password are required";
-            return;
-        }
-        try
-        {
-            var loginService = authSessionService as ILoginService<AuthSession>;
-            if (loginService == null)
-            {
-                errorMessage = "Login service is not available.";
-                return;
-            }
-            var session = loginService.LoginWithPassword(email, password);
-            if (session != null)
-            {
-                successMessage = "Login successful!";
-                // Optionally redirect or show success message
-            }
-            else
-            {
-                errorMessage = "Invalid email or password.";
-            }
-        }
-        catch (Exception ex)
-        {
-            errorMessage = $"Login failed: {ex.Message}";
-        }
+        // TODO
     }
 }
 

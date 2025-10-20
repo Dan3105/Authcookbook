@@ -1,3 +1,4 @@
+### Definition
 Authentication: **process determine a user's identity**.
 
 In ASP.NET Core, authentication is handled by `IAuthenticationService`. -> This is used by authentication **middleware**
@@ -13,12 +14,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);
 
 `AddAuthentication` parameter [JwtBearerDefaults.AuthenticationScheme](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerdefaults.authenticationscheme#microsoft-aspnetcore-authentication-jwtbearer-jwtbearerdefaults-authenticationscheme) is the name of the scheme to use by default when a specific scheme isn't requested.
 
-If multiple schemes are used, authorization policies (or authorization attributes)
+Multiple to add authentication scheme
 
 ### Authentication concepts
 
 - Authentication is **responsible** to bring `ClaimsPrincipal`
-- `ClaimsPrincipal` is used for authorization to make permission.
+- `ClaimsPrincipal` is used for authorization to make permission. ^6c7dc1
 - Following is how to use authentication handler to generate the correct set of claims:
 	- `Authentication Scheme`
 	- Default Authentication scheme
@@ -28,10 +29,11 @@ If multiple schemes are used, authorization policies (or authorization attribute
 
 `DefaultScheme`
 - When there is only a single authentication scheme registered
-- Eliminates the need to specify the `DefaultScheme` in [AddAuthentication(IServiceCollection)](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.authenticationservicecollectionextensions.addauthentication#microsoft-extensions-dependencyinjection-authenticationservicecollectionextensions-addauthentication\(microsoft-extensions-dependencyinjection-iservicecollection\)) or [AddAuthenticationCore(IServiceCollection)](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.authenticationcoreservicecollectionextensions.addauthenticationcore#microsoft-extensions-dependencyinjection-authenticationcoreservicecollectionextensions-addauthenticationcore\(microsoft-extensions-dependencyinjection-iservicecollection\)).
+- Eliminates the need to specify the `DefaultScheme` in [`AddAuthentication(IServiceCollection)`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.authenticationservicecollectionextensions.addauthentication#microsoft-extensions-dependencyinjection-authenticationservicecollectionextensions-addauthentication\(microsoft-extensions-dependencyinjection-iservicecollection\)) or [`AddAuthenticationCore(IServiceCollection)`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.authenticationcoreservicecollectionextensions.addauthenticationcore#microsoft-extensions-dependencyinjection-authenticationcoreservicecollectionextensions-addauthenticationcore\(microsoft-extensions-dependencyinjection-iservicecollection\)).
 
 ### Authentication scheme
-The authentication scheme can select which authentication handler is responsible for generating the correct set of claims.
+
+The authentication scheme can select which authentication handler is responsible for generating the correct set of [[#^6c7dc1|claims]].
 
 An authentication scheme is a name that corresponds to:
 - An authentication handler
@@ -39,8 +41,8 @@ An authentication scheme is a name that corresponds to:
 
 When configuring authentication, it's common to specify the default authentication scheme. The default scheme is used unless a resource requests a specific scheme. It's also possible to:
 
-- Specify different default schemes to use for authenticate, challenge, and forbid actions.
-- Combine multiple schemes into one using [policy schemes](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/policyschemes?view=aspnetcore-9.0).
+- Specify different default schemes to use for [[0001 Authentication#Authenticate|authenticate]], [[#Challenge|challange]], and [[0001 Authentication#Forbid|forbid]] actions.
+- Combine multiple schemes into one using [[0600 Policy Schemes|Policy Schemes]] 
 
 ### Authentication handler
 #### An authentication handler:
@@ -83,7 +85,7 @@ graph TD
     style J fill:#FFB6C6
     style K fill:#90EE90
 ```
-#### `RemoteAuthenticationHandler<TOptions>` vs `AuthenticationHandler<TOptions>`
+#### ``Remote`AuthenticationHandler<TOptions>` vs `AuthenticationHandler<TOptions>`
 
 `RemoteAuthenticationHandler<TOptions>`: is the class for authentication that require remote authentication step.
 
@@ -91,6 +93,8 @@ When the remote authentication step is finished, the handler calls back to the `
 
 The handler finishes the authentication step using the information passed to the `HandleRemoteAuthenticateAsync` callback
 
+Resource
+[[0200 OpenID Connect]]
 [OAuth 2.0](https://oauth.net/2/) and [OIDC](https://openid.net/developers/how-connect-works/) both use this pattern
 
 #### Authenticate
@@ -100,13 +104,6 @@ Is an **action** of authentication scheme. It returns an [`AuthenticateResult`]
 An authentication challenge is invoked by Authorization when an unauthenticated user requests an endpoint that requires authentication. 
 
 Authorization invokes a challenge using the specified authentication scheme(s), or the default if none is specified. See [`ChallengeAsync`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authentication.authenticationhttpcontextextensions.challengeasync). 
-
 #### Forbid
 An authentication scheme's forbid action is called by Authorization when an authenticated user attempts to access a resource they're not permitted to access. See [`ForbidAsync`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authentication.authenticationhttpcontextextensions.forbidasync)
 
-### Policy schemes
-**Authentication policy schemes** make it easier to have a single logical authentication scheme potentially use multiple approaches. 
-For example, a policy scheme might use Google authentication for challenges, and cookie authentication for everything else. **Authentication policy schemes** make it:
-
-- Easy to forward any authentication action to another scheme.
-- Forward dynamically based on the request.
