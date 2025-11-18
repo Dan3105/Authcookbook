@@ -34,15 +34,16 @@ default [MinimumSameSitePolicy](https://learn.microsoft.com/en-us/dotnet/api/mic
 
 ### Create an authentication cookie 
 ```c#
-await HttpContext.SignInAsync( CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 ```
 
 `SignInAsync` creates an encrypted cookie and adds it to the current response. If `AuthenticationScheme` isn't specified, the default scheme is used.
-
+#### `AuthencticationProperties`
+![[Pasted image 20251111074654.png]]
 ### Sign out
 ```csharp
 // Clear the existing external cookie 
-await HttpContext.SignOutAsync( CookieAuthenticationDefaults.AuthenticationScheme);
+await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 ```
 
 ### Tips and trick

@@ -2,7 +2,7 @@
 using AuthServer.Services.Shared;
 using Microsoft.EntityFrameworkCore;
 
-namespace AuthCookbook.Core.Shared.Plugins
+namespace AuthServer.Infracstructure
 {
     public class InMemoryDbContext : DbContext
     {

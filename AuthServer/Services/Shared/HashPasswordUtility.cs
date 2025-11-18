@@ -2,7 +2,7 @@
 {
     public class HashPasswordUtility
     {
-        public static bool VerifyPassword(string hashedPassword, string password)
+        public static bool VerifyPassword(string password, string hashedPassword)
         {
             return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
         }

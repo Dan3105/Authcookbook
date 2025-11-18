@@ -6,6 +6,7 @@
       {
         "id": "d40de89a4b6c978b",
         "type": "tabs",
+        "dimension": 59.84107579462103,
         "children": [
           {
             "id": "0ce21744d4313c0c",
@@ -13,12 +14,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001 - .NET Authcookbook/Authentication Method/0600 Policy Schemes.md",
+                "file": "002 - .NET Good to know/002 - Transisent & Scoped & Singleton.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0600 Policy Schemes"
+              "title": "002 - Transisent & Scoped & Singleton"
+            }
+          }
+        ]
+      },
+      {
+        "id": "0a790e39d8087f1c",
+        "type": "tabs",
+        "dimension": 40.15892420537897,
+        "children": [
+          {
+            "id": "a9b72773e2046fa5",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -53,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "multiple scheme",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -171,22 +191,30 @@
   },
   "active": "0ce21744d4313c0c",
   "lastOpenFiles": [
+    "002 - .NET Good to know/002 - IHttpContextAncestor and Blazor.md",
+    "002 - .NET Good to know/002 - Transisent & Scoped & Singleton.md",
+    "002 - .NET Good to know/002 - Vocabulary.md",
+    "001 - .NET Authcookbook/Authentication Method/0102 - Fun about Sliding Check in AuthenticationHandler.md",
+    "001 - .NET Authcookbook/Authentication Method/0101 Session-Cookie Authentication.md",
     "001 - .NET Authcookbook/Authentication Method/0100 Cookie Authentication.md",
     "001 - .NET Authcookbook/Authentication Method/0600 Policy Schemes.md",
     "001 - .NET Authcookbook/Authentication Method/0500 (Optional) - Windows Authentication.md",
     "001 - .NET Authcookbook/Authentication Method/0400 (Optional) - Certificate Authentication.md",
-    "001 - .NET Authcookbook/Authentication Method/Pasted image 20251020101018.png",
+    "001 - .NET Authcookbook/0001 Authentication.md",
+    "Pasted image 20251111074654.png",
+    "Pasted image 20251111073732.png",
+    "001 - .NET Authcookbook/Authentication Method/0300 JWT Authentication.md",
     "001 - .NET Authcookbook/Authentication Method/0200 OpenID Connect.md",
     "001 - .NET Authcookbook/Authentication Method/0110 SameSiteMode.md",
+    "001 - .NET Authcookbook/Authentication Method/Pasted image 20251026083003.png",
+    "001 - .NET Authcookbook/Authentication Method/Pasted image 20251020101018.png",
+    "002 - .NET Good to know",
     "001 - .NET Authcookbook/Authentication Method/0310 JWT Authentication - Recommended approaches to create a JWT.md",
     "001 - .NET Authcookbook/0003 Authorization.md",
     "001 - .NET Authcookbook/Authorization Method",
     "Pasted image 20251026105033.png",
-    "001 - .NET Authcookbook/Authentication Method/Pasted image 20251026083003.png",
     "001 - .NET Authcookbook/Authentication Method",
     "Overview Security.md",
-    "001 - .NET Authcookbook/Authentication Method/0300 JWT Authentication.md",
-    "001 - .NET Authcookbook/0001 Authentication.md",
     "README.md",
     "001 - .NET Authcookbook",
     "000 - System Abstract Authentication/Pasted image 20251020090859.png",

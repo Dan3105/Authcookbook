@@ -1,5 +1,6 @@
-﻿using AuthCookbook.Core.Shared.Plugins;
+﻿using AuthServer.Infracstructure;
 using AuthServer.Model.UserModel;
+using AuthServer.Services.Monitoring;
 using AuthServer.Services.Registration;
 using AuthServer.Services.Shared.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
@@ -21,11 +22,11 @@ namespace AuthServer.Extension
                         warnings.Ignore(InMemoryEventId.TransactionIgnoredWarning));
                     });
             }
-
             // Services
-            services.AddTransient<IUnitOfWork<InMemoryDbContext>, UnitOfWork>();
-            services.AddTransient<IUserRepository, UserRepository>();
-            services.AddTransient<IRegistrationService, RegistrationService>();
+            services.AddScoped<IUnitOfWork<InMemoryDbContext>, UnitOfWork>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IRegistrationService, RegistrationService>();
+            services.AddScoped<IMonitoringService, MonitoringService>();
             return services;
         }
     }

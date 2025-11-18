@@ -1,0 +1,69 @@
+﻿@page "/monitor-session"
+@using AuthServer.Model.SessionModel
+@using AuthServer.Services.Monitoring
+@rendermode InteractiveServer
+@inject IMonitoringService MonitoringService
+
+<PageTitle>Monitor Sessions</PageTitle>
+
+<h3>Active Sessions</h3>
+
+@if (sessions == null)
+{
+    <p><em>Loading sessions...</em></p>
+}
+else if (!sessions.Any())
+{
+    <p><em>No active sessions found.</em></p>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table tabl`e-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Session ID</th>
+                    <th>User ID</th>
+                    <th>Created At</th>
+                    <th>Expires At</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var session in sessions)
+                {
+                    <tr>
+                        <td>@session.SessionId</td>
+                        <td>@session.UserId</td>
+                        <td>@session.CreatedAt?.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                        <td>@session.ExpiresAt?.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+
+    private List<SessionDTO>? sessions;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // TODO: Replace with actual service call to fetch sessions
+        await LoadSessionsAsync();
+    }
+
+    private async Task LoadSessionsAsync()
+    {
+
+        // TODO: Inject and call your session service here
+
+        // Example: sessions = await SessionService.GetAllSessionsAsync();
+
+
+
+        // Mock data for demonstration
+
+        sessions = (await MonitoringService.getAllSessions()).Response;
+    }
+}

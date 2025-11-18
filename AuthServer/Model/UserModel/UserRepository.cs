@@ -1,4 +1,4 @@
-﻿using AuthCookbook.Core.Shared.Plugins;
+﻿using AuthServer.Infracstructure;
 using Microsoft.EntityFrameworkCore;
 
 namespace AuthServer.Model.UserModel

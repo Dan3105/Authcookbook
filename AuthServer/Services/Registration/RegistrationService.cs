@@ -1,4 +1,5 @@
-﻿using AuthCookbook.Core.Shared.Plugins;
+﻿using AuthServer.Infracstructure;
+using AuthServer.Model.SessionModel;
 using AuthServer.Model.UserModel;
 using AuthServer.Services.Shared;
 using AuthServer.Services.Shared.UnitOfWork;
@@ -28,9 +29,7 @@ namespace AuthServer.Services.Registration
                         username = userRegistrationDTO.username!,
                         displayName = userRegistrationDTO.username!,
                         email = userRegistrationDTO.email!,
-                        hashPassword = String.IsNullOrEmpty(userRegistrationDTO.password) ?
-                            BCrypt.Net.BCrypt.HashPassword(userRegistrationDTO.password!)
-                            : null
+                        hashPassword = BCrypt.Net.BCrypt.HashPassword(userRegistrationDTO.password!)
                     };
 
                     var createdUser = await uow.GetDbContext.Set<User>().AddAsync(userRegistration);
